@@ -1,0 +1,28 @@
+<div class="container mt-5 mb-5">
+    <div class="row mt-2 mb-4">
+        @for (item of data; track $index) {
+        <div class="col-lg-3  col-md-4 col-sm-6 mt-4">
+
+            <div class="card" style="width: 100%;">
+                <img src="{{item.image}}" class="card-img-top cardimage2" alt="...">
+                <div class="card-body">
+                    <div class="cardtitle">
+                        <h5>{{item.title}}</h5>
+                    </div>
+                    <div class="desc">
+                        <p class="card-text mt-3">{{item.description | slice : 0: 150}}</p>
+                    </div>
+                    <div>
+                        <button class="button-57" role="button" routerLink="{{item.id}}"><span class="text">&euro;
+                                {{item.price}}</span><span>Buy
+                                Now</span></button>
+                    </div>
+                </div>
+                <!-- <div class="centered"><img src="https://fontmeme.com/permalink/240206/b2feceaff1001b4b4664a4c5c0934b2c.png"
+              alt="">
+          </div> -->
+            </div>
+        </div>
+        }
+    </div>
+</div>
